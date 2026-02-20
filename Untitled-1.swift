@@ -1,9 +1,11 @@
 
 let hour  = 10
 if hour < 12 {
-    print("Good morning!")
+    print("Good Morning!")
 } else if hour < 18 {
-    print("Good afternoon!")
-} else {
-    print("Good evening!")
-}
+    print("Good Afternoon!")
+} else if hour < 21 {
+    print("Good Evening!") 
+ } else {
+    print("Good Night") 
+    }
