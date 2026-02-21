@@ -5,10 +5,10 @@ if let input = readLine(), let minutes = Int(input) {
     let random = Int.random(in: 0..<100)
     if percentage < 80 {
         print("You need to practice more.")
-    } else if random < percentage {
-        print("You will pass the calculus exam!")
+    } else if percentage < 90 {
+        print("Good!")
     } else {
-        print("You will not pass the calculus exam.")
+        print("Yippe!")
     }
 } else {
     print("Invalid input.")
