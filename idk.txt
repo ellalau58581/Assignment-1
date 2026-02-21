@@ -1,1 +1,17 @@
-print("Enter the number of minutes you study in a day for calculus:")git 
+function gradeFeedback(grade) {
+    if (grade < 50) {
+        return "you're cooked";
+    } else if (grade < 80) {
+        return "study more";
+    } else if (grade < 90) {
+        return "you did good";
+    } else {
+        return "yippe!";
+    }
+}
+
+// Test cases
+console.log(gradeeFeedback(45));   // you're cooked
+console.log(gradeeFeedback(75));   // study more
+console.log(gradeeFeedback(85));   // you did good
+console.log(gradeeFeedback(95));   // yippe!
