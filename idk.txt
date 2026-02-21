@@ -1,17 +1,18 @@
 function gradeFeedback(grade) {
     if (grade < 50) {
-        return "you're cooked";
+        return "You're cooked.";
     } else if (grade < 80) {
-        return "study more";
+        return "Study more.";
     } else if (grade < 90) {
-        return "you did good";
+        return "You did good! or did you... Let's check!";
+        return pythaogreanTheorem();
     } else {
-        return "yippe!";
+        return "Yippe!";
     }
 }
 
 // Test cases
-console.log(gradeeFeedback(45));   // you're cooked
-console.log(gradeeFeedback(75));   // study more
-console.log(gradeeFeedback(85));   // you did good
-console.log(gradeeFeedback(95));   // yippe!
+console.log(gradeFeedback(45));   // you're cooked, let's check!
+console.log(gradeFeedback(75));   // study more
+console.log(gradeFeedback(85));   // you did good
+console.log(gradeFeedback(95));   // yippe!
