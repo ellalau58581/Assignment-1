@@ -1,0 +1,1 @@
+print("Enter the number of minutes you study in a day for calculus:")git 
