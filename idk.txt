@@ -1,0 +1,20 @@
+function gradeFeedback(grade)
+Function pythaogreanTheorem (){ calculating the hypotenuse of a right triangle using the formula a^2 + b^2 = c^2 }
+{
+    if (grade < 50) {
+        return "You're cooked.";
+    } else if (grade < 80) {
+        return "Study more.";
+    } else if (grade < 90) {
+        return "You did good! or did you... Let's check your knowlege. What is this formula?";
+        pythaogreanTheorem();
+    } else {
+        return "Yippe!";
+    }
+}
+
+// Test cases
+console.log(gradeFeedback(45));   // you're cooked, let's check!
+console.log(gradeFeedback(75));   // study more
+console.log(gradeFeedback(85));   // you did good
+console.log(gradeFeedback(95));   // yippe!
