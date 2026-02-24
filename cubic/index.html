@@ -1,13 +1,29 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cubic</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css">
+  <title>cubic</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>Cubic Solver</h1>
+    <form>
+      <label for="a-value">a-value:</label>
+      <input type="number" id="a-value" name="a-value">
+      <label for="b-value">b-value:</label>
+      <input type="number" id="b-value" name="b-value">
+      <label for="c-value">c-value:</label>
+      <input type="number" id="c-value" name="c-value">
+      <label for="d-value">d-value:</label>
+      <input type="number" id="d-value" name="d-value">
+      <input type="submit" value="Solve Cubic">
+    </form>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
