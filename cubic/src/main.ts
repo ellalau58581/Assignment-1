@@ -1,3 +1,4 @@
+
 const form = document.getElementById("cubic-form") as HTMLFormElement;
 
 form?.addEventListener("submit", (event) => {
@@ -35,14 +36,14 @@ if (deltaSymbol < 0) {
   const x3Result = document.getElementById("x3-result") as HTMLParagraphElement;
   x3Result.textContent = x3.toString();\
 
-} else if (deltaSymbol) > 0) {
+} else if (deltaSymbol> 0) {
   const rootOne = Math.cbrt(-q / 2 + Math.sqrt(deltaSymbol)) + Math.cbrt(-q / 2 - Math.sqrt(deltaSymbol)) - b / (3 * a);
   const x1Result= document.getElementById("root1-result") as HTMLParagraphElement;
-  rootOneResult.textContent = rootOne.toString();
-  const x2Result = document.getElementById("root2-result") as HTMLParagraphElement;
+x1Result.textContent = rootOne.toString();
+  const x2Result = document.getElementById("x2-result) as HTMLParagraphElement;
   x2Result.textContent = "Complex";
-  const x3esult = document.getElementById("root3-result") as HTMLParagraphElement;
-  rootThreeResult.textContent = "Complex";
+  const x3esult = document.getElementById("x3-result") as HTMLParagraphElement;
+  x3esult.textContent = "Complex";
 } else {
   if (q === 0 && p === 0) {
     const rootOne = Math.cbrt((-q / 2) + Math.sqrt(deltaSymbol)) + Math.cbrt((-q / 2) - Math.sqrt(deltaSymbol)) - b / (3 * a);
