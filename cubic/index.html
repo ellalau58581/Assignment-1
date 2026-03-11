@@ -48,17 +48,15 @@
       <input type="number" id="d-value" name="d-value">
       <input type="submit" id="solve-cubic" value="Solve Cubic">
     </form>
+    <div id="results">
+      <p id="p-result"></p>
+      <p id="q-result"></p>
+      <p id="deltaSymbol-result"></p>
+      <p id="x1-result"></p>
+      <p id="x2-result"></p>
+      <p id="x3-result"></p>
+    </div>
 
-    <!-- Keep your result paragraphs if you want -->
-    <p id="result"></p>
-    <p id="p-result"></p>
-    <p id="q-result"></p>
-    <p id="deltaSymbol-result"></p>
-    <p id="x1-result"></p>
-    <p id="x2-result"></p>
-    <p id="x3-result"></p>
-
-    <!-- New table for showing results clearly -->
     <table id="roots-table" style="display:none;">
       <thead>
         <tr>
@@ -71,17 +69,14 @@
         <tr>
           <td>p</td>
           <td id="p-table"></td>
-          <td></td>
         </tr>
         <tr>
           <td>q</td>
           <td id="q-table"></td>
-          <td></td>
         </tr>
         <tr>
           <td>Discriminant</td>
           <td id="discriminant-table"></td>
-          <td></td>
         </tr>
         <tr>
           <td>Root 1</td>
