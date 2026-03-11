@@ -5,7 +5,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="src/style.css">
-  <title>cubic</title>
+  <title>Cubic Solver</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    thead tr {
+      background-color: #ff7f27;
+      color: white;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+  </style>
 </head>
 
 <body>
@@ -22,6 +48,8 @@
       <input type="number" id="d-value" name="d-value">
       <input type="submit" id="solve-cubic" value="Solve Cubic">
     </form>
+
+    <!-- Keep your result paragraphs if you want -->
     <p id="result"></p>
     <p id="p-result"></p>
     <p id="q-result"></p>
@@ -29,6 +57,49 @@
     <p id="x1-result"></p>
     <p id="x2-result"></p>
     <p id="x3-result"></p>
+
+    <!-- New table for showing results clearly -->
+    <table id="roots-table" style="display:none;">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>x</th>
+          <th>y</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>p</td>
+          <td id="p-table"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>q</td>
+          <td id="q-table"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Discriminant</td>
+          <td id="discriminant-table"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Root 1</td>
+          <td id="root1-table"></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Root 2</td>
+          <td id="root2-table"></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Root 3</td>
+          <td id="root3-table"></td>
+          <td>0</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <script type="module" src="/src/main.ts"></script>
 </body>

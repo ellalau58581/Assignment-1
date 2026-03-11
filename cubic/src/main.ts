@@ -29,12 +29,12 @@ form?.addEventListener("submit", (event) => {
 
   const x1Result = document.getElementById("x1-result") as HTMLParagraphElement;
   const x2Result = document.getElementById("x2-result") as HTMLParagraphElement;
-  const x3Result = document.getElementById("x3-result") as HTMLParagraphElement
+  const x3Result = document.getElementById("x3-result") as HTMLParagraphElement;
   const eplison = 1e-12;
   if (deltaSymbol < -eplison) {
     const theta = Math.acos(Math.min(Math.max(-q / (2 * Math.sqrt((-(p / 3)) ** 3)), -1), 1)) / 3;
     const x1 = 2 * Math.sqrt(-p / 3) * Math.cos(theta) - b / (3 * a);
-    const x2 = 2 * Math.sqrt(-p / 3) * Math.cos(theta + (2 * Math.PI / 3)) - b / (3 * a);
+    const x2 = 2 fi* Math.sqrt(-p / 3) * Math.cos(theta + (2 * Math.PI / 3)) - b / (3 * a);
     const x3 = 2 * Math.sqrt(-p / 3) * Math.cos(theta + (4 * Math.PI / 3)) - b / (3 * a);
     x1Result.textContent = roundToInteger(x1).toString();
     x2Result.textContent = roundToInteger(x2).toString();
@@ -59,8 +59,14 @@ form?.addEventListener("submit", (event) => {
       x1Result.textContent = roundToInteger(x1).toString();
       x2Result.textContent = roundToInteger(x2).toString();
       x3Result.textContent = roundToInteger(x2).toString();
+
     }
   }
-
+  document.getElementById("p-table")!.textContent = p.toFixed(6);
+  document.getElementById("q-table")!.textContent = q.toFixed(6);
+  document.getElementById("discriminant-table")!.textContent = deltaSymbol.toFixed(6);
+  document.getElementById("root1-table")!.textContent = x1.toFixed(6);
+  document.getElementById("root2-table")!.textContent = x2.toFixed(6);
+  document.getElementById("root3-table")!.textContent = x3.toFixed(6);
+  document.getElementById("roots-table")!.style.display = "table";
 });
-
