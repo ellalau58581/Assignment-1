@@ -11,11 +11,6 @@ form?.addEventListener("submit", (event) => {
   const c: number = Number(formData.get("c-value"));
   const d: number = Number(formData.get("d-value"));
 
-  function roundToInteger(x: number): number {
-    return Math.abs(x - Math.round(x)) < 1e-10 ? Math.round(x) : x;
-    // fixes floating-point issue, and rounds to a number
-  }
-
   if (a === 0) {
     alert("Coefficient 'a' cannot be zero.");
     return;
@@ -23,10 +18,10 @@ form?.addEventListener("submit", (event) => {
 
   const p = (3 * a * c - b * b) / (3 * a * a);
   const q = (27 * a * a * d - 9 * a * b * c + 2 * b ** 3) / (27 * a ** 3);
-  const deltaSymbol = (q / 2) ** 2 + (p / 3) ** 3;
-  document.getElementById("q-result")!.textContent = `${q}`;
-  document.getElementById("p-result")!.textContent = `${p}`;
-  document.getElementById("deltaSymbol-result")!.textContent = `${deltaSymbol}`;
+  const deltaSymbol = Number(((q / 2) ** 2 + (p / 3) ** 3).toFixed(10));
+  document.getElementById("q-table")!.textContent = `${q}`;
+  document.getElementById("p-table")!.textContent = `${p}`;
+  document.getElementById("discriminant")!.textContent = `${deltaSymbol}`;
 
   if (deltaSymbol < 0) {
     const theta = Math.acos(Math.min(Math.max(-q / (2 * Math.sqrt((-(p / 3)) ** 3)), -1), 1)) / 3;
