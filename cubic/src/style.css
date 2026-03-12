@@ -1,95 +1,87 @@
-/* Reset some default spacing */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Page background */
 body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #a19edb, #9333ea);
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 30px;
 }
 
-/* Main card container */
 #app {
+  max-width: 500px;
+  margin: auto;
   background: white;
-  padding: 40px;
-  border-radius: 16px;
-  width: 400px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.6s ease-in-out;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Title */
 h1 {
   text-align: center;
-  margin-bottom: 25px;
-  color: #333;
+  margin-bottom: 20px;
 }
 
-/* Form layout */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+#cubic-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-/* Labels */
 label {
-  font-weight: bold;
-  font-size: 14px;
-  color: #555;
+  grid-column: 1 / 2;
+  align-self: center;
 }
 
-/* Input fields */
 input[type="number"] {
-  padding: 10px;
-  border-radius: 8px;
+  grid-column: 2 / 3;
+  padding: 6px;
   border: 1px solid #ccc;
-  font-size: 14px;
-  transition: 0.3s ease;
+  border-radius: 4px;
 }
 
-/* Input focus effect */
-input[type="number"]:focus {
-  outline: none;
-  border-color: #6d28d9;
-  box-shadow: 0 0 5px rgba(109, 40, 217, 0.4);
-}
-
-/* Submit button */
-input[type="submit"] {
+#solve-cubic {
+  grid-column: span 2;
+  padding: 10px;
   margin-top: 10px;
-  padding: 12px;
-  border-radius: 10px;
+  background-color: #ead3e6;
   border: none;
-  background: #6d28d9;
-  color: white;
+  color: rgb(123, 66, 101);
   font-weight: bold;
+  border-radius: 4px;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
-/* Button hover */
-input[type="submit"]:hover {
-  background: #5b21b6;
-  transform: translateY(-2px);
+#solve-cubic:hover {
+  background-color: #c3a1bb;
 }
 
-/* Small animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
+#results {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+thead tr {
+  background-color: #ff7f27;
+  color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
 }
