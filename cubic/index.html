@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="src/style.css">
-  <title>Cubic Solver</title>
+  <title>Cubic Equation Solver</title>
 </head>
 
 <body>
   <div id="app">
-    <h1>Cubic Solver</h1>
+    <h1>Cubic Equation Solver</h1>
     <form id="cubic-form">
       <label for="a-value">a-value:</label>
       <input type="number" id="a-value" name="a-value">
@@ -22,11 +22,10 @@
       <input type="number" id="d-value" name="d-value">
       <input type="submit" id="solve-cubic" value="Solve Cubic">
     </form>
-    <div id="results">
-    <table id="roots-table">
+    <table>
       <thead>
         <tr>
-          <td>Value</td>
+          <th>Value</th>
           <th>x</th>
           <th>y</th>
         </tr>
@@ -42,25 +41,27 @@
         </tr>
         <tr>
           <td>Discriminant</td>
-          <td id="discriminant-table"></td>
+          <td id="discriminant"></td>
         </tr>
         <tr>
           <td>Root 1</td>
-          <td id="root1-table"></td>
+          <td id="x1"></td>
           <td>0</td>
         </tr>
         <tr>
           <td>Root 2</td>
-          <td id="root2-table"></td>
+          <td id="x2"></td>
           <td>0</td>
         </tr>
         <tr>
           <td>Root 3</td>
-          <td id="root3-table"></td>
+          <td id="x3"></td>
           <td>0</td>
         </tr>
       </tbody>
     </table>
+    <h2>Graph</h2>
+    <canvas id="cubic-graph" width="1000" height="500" aria-label="Cubic graph"></canvas>
   </div>
   <script type="module" src="/src/main.ts"></script>
 </body>
